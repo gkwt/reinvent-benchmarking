@@ -14,7 +14,7 @@ from model import RNN
 from data_structs import Vocabulary, Experience
 from scoring_functions import get_scoring_function
 from utils import Variable, seq_to_smiles, fraction_valid_smiles, unique
-from vizard_logger import VizardLog
+# from vizard_logger import VizardLog
 
 def normalize_score(current_fitness, all_fitness, threshold = 0.7):
     all_fitness = np.array(all_fitness)[~np.isnan(all_fitness)]
