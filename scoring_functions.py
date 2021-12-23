@@ -13,7 +13,7 @@ import threading
 import pexpect
 rdBase.DisableLog('rdApp.error')
 
-from custom import fitness_function
+from custom import custom_score
 
 """Scoring function should be a class where some tasks that are shared for every call
    can be reallocated to the __init__, and has a __call__ method which takes a single SMILES of
@@ -177,7 +177,7 @@ class Singleprocessing():
 
 def get_scoring_function(scoring_function, num_processes=None, **kwargs):
     """Function that initializes and returns a scoring function by name"""
-    scoring_function_classes = [no_sulphur, tanimoto, activity_model, fitness_function]
+    scoring_function_classes = [no_sulphur, tanimoto, activity_model, custom_score]
     scoring_functions = [f.__name__ for f in scoring_function_classes]
     scoring_function_class = [f for f in scoring_function_classes if f.__name__ == scoring_function][0]
 

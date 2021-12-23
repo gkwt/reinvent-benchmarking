@@ -1,0 +1,241 @@
+
+Lmod is automatically replacing "intel/2020.1.217" with "gcc/9.3.0".
+
+
+Lmod is automatically replacing "intel/2020.1.217" with "gcc/9.3.0".
+
+Model initialized, starting training...
+
+Best score in memory: 11.73
+
+       Step 0   Fraction valid SMILES: 95.0  Time elapsed: 0.00h Time left: 0.02h
+  Agent    Prior   Target   Score   Fitness             SMILES
+  -7.90    -7.90  106.94    5.74     5.74     c1csc(-c2ccc(-c3ccc(-c4scc5ccoc45)nc3)nc2)n1
+  -9.16    -9.16   68.04    3.86     3.86     C1=Cc2c(c3c(c4c2=CCC=4)C=C(c2scc4[nH]ccc24)C3)C1
+ -21.68   -21.68  -21.68    0.00      nan     C1=CCC(C2=Cc3cc4c5ccccc5c4cc5c(c4cc3C2)=CCC=5)=C1
+ -12.13   -12.13  114.94    6.35     6.35     c1cc2c3cscc3c3c(oc4cc(-c5cncc6nsnc56)c5nsnc5c43)c2[nH]1
+ -14.91   -14.91   70.26    4.26     4.26     c1csc(-c2cc3c4nsnc4c4c5[nH]ccc5[nH]c4c3[nH]2)n1
+ -19.38   -19.38  -19.38    0.00      nan     c1ccc2c(c1)c(-c1scc3[nH]ccc13)cc1cnc3ccn4ncc4ccccc4c3c12
+ -10.22   -10.22  103.43    5.68     5.68     c1cc2cc3[nH]c4cc(-c5cncc6nsnc56)c5cocc5c4c3cc2cn1
+ -12.68   -12.68  123.82    6.83     6.83     c1c[nH]c(-c2cc3c4c[nH]cc4c4c5ncccc5oc4c3c3cscc23)c1
+ -13.07   -13.07  149.17    8.11     8.11     c1coc(-c2cc3ncc4c5c6ccccc6ccc5c5nsnc5c4c3c3ccccc23)c1
+  -9.64    -9.64   61.80    3.57     3.57     C1=CCC(c2cc3c4c(c5c(cnc6cccnc65)c3[nH]2)=CCC=4)=C1
+Best in generation:  11.73   c1cc2csc(-c3ccc4c(c3)c3cscc3c3c5c6cscc6ccc5c5cscc5c43)c2s1
+Best in general:     11.73   c1cc2csc(-c3ccc4c(c3)c3cscc3c3c5c6cscc6ccc5c5cscc5c43)c2s1
+
+Best score in memory: 11.73
+
+       Step 1   Fraction valid SMILES: 96.0  Time elapsed: 0.00h Time left: 0.01h
+  Agent    Prior   Target   Score   Fitness             SMILES
+ -12.96   -12.67  131.12    7.19     7.19     C1=c2c(c3c(sc4cc(-c5scc6cc[nH]c56)c5cscc5c43)c3occc23)=CC1
+ -15.64   -14.35  -14.35    0.00      nan     c1c[nH]c(-c2ccc(-c3ccc(-c4ccco4)cn3)o2)C1
+ -12.30   -14.33  157.45    8.59     8.59     c1ccc(-c2cc3c4ccccc4c4c5[nH]ccc5c5ccccc5c4c3c3cocc23)nc1
+ -12.69   -11.58  107.93    5.98     5.98     C1=C(c2nccc3nsnc23)Cc2c1c1ccccc1c1c2[nH]c2ccc3nsnc3c21
+ -12.26   -12.36  145.91    7.91     7.91     c1ccc2c(c1)c(-c1cncs1)cc1c3nsnc3c3c4c(ccc5nsnc54)c4c[nH]cc4c3c21
+ -10.63   -10.03   84.75    4.74     4.74     c1c[nH]c(-c2cc3cc4c(cc3c3nsnc23)-c2[nH]ccc2C4)c1
+  -9.05    -8.90  169.57    8.92     8.92     C1=CCC(c2cc3cc4c(cc3c3cscc23)c2c3cscc3ccc2c2nsnc42)=C1
+  -9.80    -9.92   93.54    5.17     5.17     C1=c2cccc(-c3cnc4c(ccc5cc6ccccc6cc54)c3)c2=CC1
+  -9.72   -10.25  151.80    8.10     8.10     c1cc(-c2ccc3c(c2)c2ccccc2c2c3[nH]c3ccsc32)c2cocc2c1
+  -9.82    -9.90   61.98    3.59     3.59     C1=c2ccc3c4c(c5cc(-c6scc7nccnc67)ccc5c3c2=CC1)=CCC=4
+Best in generation:  10.60   c1ccc2c(c1)c1ccc3cocc3c1c1c3cscc3c3cc(-c4nccs4)c4cscc4c3c21
+Best in general:     11.73   c1cc2csc(-c3ccc4c(c3)c3cscc3c3c5c6cscc6ccc5c5cscc5c43)c2s1
+
+Best score in memory: 12.10
+
+       Step 2   Fraction valid SMILES: 93.3  Time elapsed: 0.00h Time left: 0.01h
+  Agent    Prior   Target   Score   Fitness             SMILES
+  -8.70   -10.10  166.56    8.83     8.83     c1csc(-c2ccc(-c3sc(-c4cccc5cocc45)c4ccsc34)s2)c1
+  -9.64   -10.74   93.82    5.23     5.23     c1cc2csc(-c3ccc(-c4cncc5nsnc45)cc3)c2o1
+ -10.07    -9.63  125.39    6.75     6.75     c1ccc(-c2cc3sc4c(ccc5ccc6c[nH]cc6c54)c3cn2)cc1
+ -12.21   -13.47  146.31    7.99     7.99     C1=C(c2cccc3ccccc23)Cc2c1oc1c3ccccc3c3ccccc3c21
+ -13.28   -16.61  153.68    8.51     8.51     c1ccc(-c2ccc3c(ccc4c3c3ccccc3c3ccc5ccccc5c34)c2)nc1
+ -42.42   -43.04  -43.04    0.00      nan     c1cc2c3c[nH]cc3c3c(ccc2c1)Cc1c-3oc2ccs1)c1cscc1c1cc(-c2scc4ccoc24)c2c[nH]cc2c31
+ -11.78   -10.75  110.09    6.04     6.04     C1=c2c(-c3cccc4cscc34)cc3oc4c5ncccc5sc4c3c2=CC1
+ -10.58   -11.08  124.96    6.80     6.80     C1=c2c(-c3ccc[nH]3)cc3c4cscc4c4c([nH]c5ccc6ccccc6c54)c3c2=CC1
+ -11.04   -13.83  106.55    6.02     6.02     C1=c2cccc(-c3cc4c5cscc5c5ccc6c(c5c4c4cscc34)=CCC=6)c2=CC1
+  -8.95   -10.34  147.84    7.91     7.91     c1ccc2c(c1)ccc1ccc3c4c(cc(-c5cncs5)c5nsnc54)c4c[nH]cc4c3c12
+Best in generation:  12.10   c1ccc2c(c1)c1ccccc1c1c(-c3ncc(-c4cccc5cscc45)c4nsnc34)sc(-c3scc4sccc34)c21
+Best in general:     12.10   c1ccc2c(c1)c1ccccc1c1c(-c3ncc(-c4cccc5cscc45)c4nsnc34)sc(-c3scc4sccc34)c21
+
+Best score in memory: 12.10
+
+       Step 3   Fraction valid SMILES: 96.2  Time elapsed: 0.00h Time left: 0.00h
+  Agent    Prior   Target   Score   Fitness             SMILES
+ -17.06   -15.89  113.82    6.49     6.49     c1cc2c3cocc3c3c4cnc(-c5scc6[nH]ccc56)cc4oc3c2cn1
+ -11.75   -11.03  139.00    7.50     7.50     c1cc2c(-c3cnc4c(ccc5c4c4cocc4c4ccc6nsnc6c45)c3)scc2[nH]1
+ -11.60   -10.85  126.52    6.87     6.87     C1=c2ccc3c4cscc4c4c([nH]c5cc(-c6cccnc6)c6ccccc6c54)c3c2=CC1
+ -14.20   -13.73   78.14    4.59     4.59     C1=Cc2c(c3c4c(c5cc(-c6ncncn6)ccc5c3c3cscc23)=CCC=4)C1
+ -11.17   -14.04  121.08    6.76     6.76     c1ccc(-c2cnc3c(c2)c2ccccc2c2c4ccccc4ccc32)nc1
+ -10.97   -11.14  146.83    7.90     7.90     c1csc(-c2cc3[nH]c4c5[nH]ccc5c5cscc5c4c3c3ccccc23)c1
+ -11.92   -11.13  129.44    7.03     7.03     c1cc(-c2cc3ncc4cc5ccoc5cc4c3c3c[nH]cc23)c2cocc2c1
+  -7.48   -13.28  193.35   10.33    10.33     c1ccc(-c2sc(-c3ccc(-c4cccc5cscc45)c4ccccc34)c3ccsc23)cc1
+ -10.54   -10.95  142.96    7.70     7.70     c1ccc2c(c1)c1c[nH]cc1c1cc(-c3scc4ccoc34)c3cocc3c21
+  -9.04    -9.90  150.92    8.04     8.04     c1ccc2c(-c3ccc4c(c3)c3ccccc3c3c4[nH]c4ccoc43)cccc2c1
+Best in generation:  11.67   c1cc(-c2cc3c4cscc4c4c5ccccc5c5cscc5c4c3c3cscc23)c2cscc2c1
+Best in general:     12.10   c1ccc2c(c1)c1ccccc1c1c(-c3ncc(-c4cccc5cscc45)c4nsnc34)sc(-c3scc4sccc34)c21
+
+Best score in memory: 12.10
+
+       Step 4   Fraction valid SMILES: 93.3  Time elapsed: 0.00h Time left: 0.00h
+  Agent    Prior   Target   Score   Fitness             SMILES
+ -13.65   -13.79  141.55    7.77     7.77     c1ncnc(-c2cc3c4cscc4c4c(oc5ccc6cscc6c54)c3c3cocc23)n1
+ -11.90   -19.72  178.83    9.93     9.93     c1cc(-c2cc3c4cscc4c4cc5ccccc5cc4c3c3ccccc23)c2cocc2c1
+ -10.94   -12.02  171.59    9.18     9.18     c1ccc2c(c1)c1cc(-c3cncs3)c3c[nH]cc3c1c1sc3ccc4cscc4c3c21
+  -9.70   -13.92  180.56    9.72     9.72     c1cc(-c2ccc3c(c2)sc2c4c5c[nH]cc5ccc4c4ccccc4c32)c2cscc2c1
+ -19.83   -27.55  -27.55    0.00      nan     c1csc(-c2cc3ncc4c5c6cscc6c(-c6cncc7nsnc65)c5c[nH]cc5c4c3c3cscc23)c1
+ -12.37   -17.02  161.18    8.91     8.91     c1csc(-c2cc3c4cocc4c4c(oc5ccc6c[nH]cc6c54)c3c3cscc23)c1
+ -12.89   -10.75  146.58    7.87     7.87     C1=Cc2c(-c3ccc(-c4ccccc4)c4ccccc34)sc(-c3cccnc3)c2C1
+ -11.65   -12.69  145.49    7.91     7.91     c1ccc2c(c1)c(-c1cncc3nsnc13)cc1cc3c4cscc4c4cc[nH]c4c3cc12
+ -13.02   -12.81  105.93    5.94     5.94     c1csc(-c2cc3[nH]c4c5occc5c5cocc5c4c3cn2)c1
+ -11.50   -12.12  141.78    7.70     7.70     c1c[nH]c(-c2cc3c4cscc4c4cc5ccc6cocc6c5cc4c3o2)c1
+Best in generation:  11.67   c1csc(-c2cc3c4ccccc4c4c5c6cscc6ccc5c5cscc5c4c3c3cscc23)c1
+Best in general:     12.10   c1ccc2c(c1)c1ccccc1c1c(-c3ncc(-c4cccc5cscc45)c4nsnc34)sc(-c3scc4sccc34)c21
+
+Best score in memory: 12.83
+
+       Step 5   Fraction valid SMILES: 94.3  Time elapsed: 0.00h Time left: 0.00h
+  Agent    Prior   Target   Score   Fitness             SMILES
+ -11.44   -14.31  136.60    7.55     7.55     C1=C(c2cccs2)Cc2c1c1cscc1c1c2c2c(c3ccc4cscc4c31)=CCC=2
+  -9.07   -14.92  187.32   10.11    10.11     c1cc2csc(-c3cc4c5cscc5c5ccc6cscc6c5c4c4cscc34)c2o1
+ -12.17   -13.60  143.24    7.84     7.84     c1ccc(-c2cc3c4nsnc4c4c5[nH]ccc5c5cscc5c4c3c3c[nH]cc23)cc1
+  -8.60    -9.28  131.80    7.05     7.05     C1=c2ccc3cc4sc5cc(-c6cccc7cscc67)ccc5c4cc3c2=CC1
+  -9.25   -23.22  202.08   11.27    11.27     c1ccc2c(c1)c1cc(-c3scc4ccoc34)c3cscc3c1c1c3cscc3c3ccsc3c21
+  -6.78   -10.15  173.42    9.18     9.18     c1cc(-c2ccc(-c3ccc(-c4cccc5cscc45)cc3)s2)c2cscc2c1
+ -10.84   -14.44  121.18    6.78     6.78     c1ccc2c(c1)ccc1ccc3c4ccccc4c4c[nH]cc4c3c12
+ -13.44   -13.61  153.68    8.36     8.36     c1coc(-c2ccc(-c3ccc(-c4scc5ccsc45)s3)c3cocc23)c1
+ -10.46   -12.85  162.64    8.77     8.77     c1csc(-c2cc3ccc4c(ccc5ccc6ccccc6c54)c3c3cocc23)c1
+ -12.59   -12.18   95.04    5.36     5.36     C1=C(c2cccnc2)Cc2c1ccc1c3cnccc3c3c[nH]cc3c21
+Best in generation:  12.83   c1ccc2c(c1)c1ccccc1c1c(-c3ccc4c(c3)sc3c5c6cscc6ccc5c5cscc5c43)scc21
+Best in general:     12.83   c1ccc2c(c1)c1ccccc1c1c(-c3ccc4c(c3)sc3c5c6cscc6ccc5c5cscc5c43)scc21
+
+Best score in memory: 12.83
+
+       Step 6   Fraction valid SMILES: 94.6  Time elapsed: 0.00h Time left: 0.00h
+  Agent    Prior   Target   Score   Fitness             SMILES
+  -9.55   -12.08  181.11    9.66     9.66     c1ccc(-c2ccc(-c3sc(-c4cccc5cscc45)c4[nH]ccc34)c3cscc23)cc1
+ -28.76   -30.66  -30.66    0.00      nan     C1=C(c2cccc3ccccc23)Cc2c1ccc1c3occc3c(-c3cccc4cscc34)cc2c1
+ -13.43   -14.26  136.91    7.56     7.56     c1ccc2c(c1)c1cccnc1c1sc3cc(-c4scc5cc[nH]c45)oc3c21
+ -10.98   -15.50  177.37    9.64     9.64     c1coc(-c2cc3c4cscc4c4c5occc5c5cscc5c4c3c3cscc23)c1
+ -13.16   -12.25  148.56    8.04     8.04     c1c[nH]c(-c2ccc3c(c2)c2ccccc2c2c4ccccc4c4cocc4c32)c1
+ -11.26   -11.84  118.23    6.50     6.50     c1cc2c(cc1-c1cncc3nsnc13)c1c[nH]cc1c1c2[nH]c2ccc3c[nH]cc3c21
+ -10.80   -11.80  161.10    8.65     8.65     c1cc2c(-c3cc4c5cocc5c5c(ccc6cc[nH]c65)c4c4cscc34)scc2[nH]1
+  -7.43   -12.65  177.75    9.52     9.52     c1ccc(-c2cc3c4cscc4c4c(ccc5ccc6cocc6c54)c3c3cocc23)cc1
+  -9.75   -16.97  168.14    9.26     9.26     c1ccc(-c2cc3c4c[nH]cc4c4c(ccc5ccc6cscc6c54)c3c3cocc23)cc1
+ -15.85   -22.04  176.75    9.94     9.94     C1=Cc2csc(-c3cc4sc5c6c(ccc7nsnc76)c6cscc6c5c4c4cscc34)c2C1
+Best in generation:  12.83   c1ccc2c(c1)c1ccccc1c1c(-c3ccc4c(c3)c3cscc3c3c5sccc5c5cscc5c43)scc21
+Best in general:     12.83   c1ccc2c(c1)c1ccccc1c1c(-c3ccc4c(c3)sc3c5c6cscc6ccc5c5cscc5c43)scc21
+
+Best score in memory: 12.83
+
+       Step 7   Fraction valid SMILES: 94.2  Time elapsed: 0.00h Time left: 0.00h
+  Agent    Prior   Target   Score   Fitness             SMILES
+ -12.78   -11.67  114.84    6.33     6.33     C1=c2ccc3c4cscc4c4c5cnc(-c6cncs6)cc5c5c[nH]cc5c4c3c2=CC1
+ -14.16   -15.52  140.85    7.82     7.82     c1cc2sc3c([nH]c4cc(-c5scc6ccoc56)c5cscc5c43)c2o1
+ -12.71   -24.48  144.47    8.45     8.45     c1ccc(-c2ccc3c(c2)c2c[nH]cc2c2c3c3ccccc3c3ccccc32)cc1
+  -8.53   -15.32  177.88    9.66     9.66     c1ccc(-c2ccc(-c3ccc(-c4scc5ccsc45)c4c[nH]cc34)c3cscc23)cc1
+ -10.14   -12.54  131.26    7.19     7.19     C1=Cc2c(csc2-c2cc3c(c4ccccc24)-c2[nH]c4ccccc4c2C3)C1
+ -10.09   -11.12  180.52    9.58     9.58     c1ccc2c(c1)ccc1cc3oc4cc(-c5scc6ccoc56)c5cscc5c4c3cc12
+  -9.35   -10.46  155.60    8.30     8.30     c1ccc(-c2ccc(-c3sc(-c4cccc5cocc45)c4ccoc34)s2)cc1
+  -8.69   -11.90  154.21    8.31     8.31     c1ccc(-c2cc3ccc4c5ccccc5c5cocc5c4c3c3cocc23)cc1
+ -10.36   -20.18  166.27    9.32     9.32     c1cc(-c2cc3c4ccccc4c4c5ccccc5ncc4c3c3cocc23)c2cscc2c1
+ -10.00   -11.13  131.01    7.11     7.11     c1ccc2c(c1)c1ccccc1c1c3occc3c3cscc3c21
+Best in generation:  12.83   c1ccc2c(c1)c1ccccc1c1c(-c3ccc4c(c3)sc3c5c6cscc6ccc5c5cscc5c43)scc21
+Best in general:     12.83   c1ccc2c(c1)c1ccccc1c1c(-c3ccc4c(c3)sc3c5c6cscc6ccc5c5cscc5c43)scc21
+
+Best score in memory: 12.83
+
+       Step 8   Fraction valid SMILES: 95.4  Time elapsed: 0.00h Time left: 0.00h
+  Agent    Prior   Target   Score   Fitness             SMILES
+ -10.30   -14.01  161.73    8.79     8.79     c1cc(-c2cc3c4cocc4c4ccc5c[nH]cc5c4c3c3ccccc23)c2cocc2c1
+  -9.38   -14.88  205.12   11.00    11.00     c1ccc2c(c1)c(-c1scc3ccsc13)cc1c3cscc3c3c([nH]c4ccc5cscc5c43)c21
+  -7.18   -22.89  211.78   11.73    11.73     c1ccc2c(c1)c1cc(-c3scc4ccsc34)c3cscc3c1c1c3cscc3c3ccsc3c21
+ -10.91   -15.35  170.94    9.31     9.31     c1cc2c(-c3ccc(-c4sc(-c5scc6ccsc56)c5cc[nH]c45)cc3)scc2o1
+ -10.88   -18.17  192.46   10.53    10.53     c1c[nH]c(-c2cc3c4cocc4c4c5c6cscc6ccc5c5cscc5c4c3c3cscc23)c1
+  -8.47   -15.36  174.99    9.52     9.52     c1cc(-c2sc(-c3ccc(-c4scc5ccoc45)cc3)c3ccsc23)c2cocc2c1
+ -10.14   -16.70  164.45    9.06     9.06     c1cc(-c2cc3ccc4c5ncccc5c5c[nH]cc5c4c3c3ccccc23)c2cscc2c1
+ -11.67   -15.22  134.47    7.48     7.48     c1csc(-c2cnc3c(ccc4c3ccc3ccc5cscc5c34)c2)c1
+ -10.99   -12.59  154.76    8.37     8.37     c1cc(-c2cc3sc4cc5ccoc5cc4c3c3ccccc23)c2cocc2c1
+ -10.04   -13.06  158.41    8.57     8.57     c1cncc(-c2ccc(-c3ccc(-c4cccs4)c4cscc34)c3cscc23)c1
+Best in generation:  12.83   c1cc(-c2cc3c4cscc4c4c5c6cscc6ccc5c5cscc5c4c3c3ccccc23)c2cscc2c1
+Best in general:     12.83   c1ccc2c(c1)c1ccccc1c1c(-c3ccc4c(c3)sc3c5c6cscc6ccc5c5cscc5c43)scc21
+
+Best score in memory: 12.83
+
+       Step 9   Fraction valid SMILES: 95.3  Time elapsed: 0.00h Time left: 0.00h
+  Agent    Prior   Target   Score   Fitness             SMILES
+  -9.28   -15.16  164.65    8.99     8.99     c1cc(-c2cc3ccc4c5[nH]ccc5c5ccccc5c4c3c3c[nH]cc23)c2cscc2c1
+ -10.73   -14.47  173.10    9.38     9.38     c1cc(-c2cc3oc4c5[nH]ccc5c5cscc5c4c3c3cscc23)c2cscc2c1
+ -11.22   -12.64  169.74    9.12     9.12     c1c[nH]c(-c2cc3cnc4c5c6ccccc6ccc5c5cscc5c4c3c3cscc23)c1
+ -14.16   -11.98   68.42    4.02     4.02     C1=c2c(-c3cccnc3)cc3ccc4ccccc4c3c2=CC1
+  -9.37   -13.08  187.93   10.05    10.05     c1csc(-c2cc3c4cscc4c4cc5ccc6cocc6c5cc4c3c3cscc23)c1
+  -9.60   -14.71  156.85    8.58     8.58     c1cc(-c2ncc(-c3ccc(-c4scc5ccsc45)cc3)c3nsnc23)c2cscc2c1
+ -12.09   -24.21  207.22   11.57    11.57     C1=C(c2cccc3cscc23)Cc2c1c1cscc1c1c3c4cocc4c4ccccc4c3c3ccccc3c21
+ -19.17   -27.69  153.94    9.08     9.08     C1=Cc2c(-c3ccc(-c4ccccc4)c4cscc34)sc(-c3nccc4ccccc34)c2C1
+ -11.00   -17.60  167.51    9.26     9.26     c1ccc(-c2cc3c4c[nH]cc4c4c5sccc5c5cocc5c4c3c3ccccc23)cc1
+ -12.96   -12.66  150.71    8.17     8.17     c1cc2c(-c3cc4c5nsnc5c5c(ccc6ccc7c[nH]cc7c65)c4o3)scc2s1
+Best in generation:  12.83   c1ccc2c(c1)c1ccccc1c1c(-c3ccc4c(c3)c3cscc3c3c4sc4ccc5cscc5c43)scc21
+Best in general:     12.83   c1ccc2c(c1)c1ccccc1c1c(-c3ccc4c(c3)sc3c5c6cscc6ccc5c5cscc5c43)scc21
+
+********************************************************************************
+
+         Best recorded SMILES: 
+
+Score     Prior log P     SMILES
+
+12.83   -18.74        c1ccc2c(c1)c1ccccc1c1c(-c3ccc4c(c3)sc3c5c6cscc6ccc5c5cscc5c43)scc21
+12.83   -18.34        c1ccc2c(c1)c1ccccc1c1c(-c3ccc4c(c3)c3cscc3c3c5sccc5c5cscc5c43)scc21
+12.83   -27.83        c1cc(-c2cc3c4cscc4c4c5c6cscc6ccc5c5cscc5c4c3c3ccccc23)c2cscc2c1
+12.83   -19.99        c1ccc2c(c1)c1ccccc1c1c(-c3ccc4c(c3)c3cscc3c3c4sc4ccc5cscc5c43)scc21
+12.42   -28.95        c1ccc2c(c1)c1cc(-c3scc4ccsc34)c3cscc3c1c1c3cscc3c3ccc4cocc4c3c21
+12.42   -22.39        c1ccc2c(c1)c(-c1scc3ccsc13)cc1c3cocc3c3c4c5cscc5ccc4c4cscc4c3c21
+12.36   -25.82        c1cc(-c2cc3c4cscc4c4c5c6cocc6ccc5c5cscc5c4c3c3ccccc23)c2cscc2c1
+12.10   -16.69        c1ccc2c(c1)c1ccccc1c1c(-c3ncc(-c4cccc5cscc45)c4nsnc34)sc(-c3scc4sccc34)c21
+11.73   -15.14        c1cc2csc(-c3ccc4c(c3)c3cscc3c3c5c6cscc6ccc5c5cscc5c43)c2s1
+11.73   -21.21        c1ccc2c(c1)c1cc(-c3scc4sccc34)sc1c1c3cscc3c3ccc4cscc4c3c21
+11.73   -16.59        c1cc2c(-c3cc4c5cscc5c5c(ccc6ccc7cscc7c65)c4c4cscc34)scc2s1
+11.73   -22.89        c1ccc2c(c1)c1cc(-c3scc4ccsc34)c3cscc3c1c1c3cscc3c3ccsc3c21
+11.73   -17.51        c1cc(-c2cc3sc4c5c6cscc6ccc5c5cscc5c4c3c3cscc23)c2cscc2c1
+11.73   -15.16        c1cc(-c2cc3c4cscc4c4c5sccc5c5cscc5c4c3c3cscc23)c2cscc2c1
+11.73   -21.42        c1cc2c(-c3sc(-c4sc(-c5cccc6cscc56)c5ccsc45)c4ccsc34)scc2s1
+11.73   -13.70        c1cc(-c2sc(-c3sc(-c4scc5ccsc45)c4ccsc34)c3ccsc23)c2cscc2c1
+11.67   -16.91        c1cc(-c2cc3c4cscc4c4c5ccccc5c5cscc5c4c3c3cscc23)c2cscc2c1
+11.67   -18.73        c1csc(-c2cc3c4ccccc4c4c5c6cscc6ccc5c5cscc5c4c3c3cscc23)c1
+11.67   -17.59        c1ccc2c(c1)c(-c1scc3ccsc13)cc1cc3c4cscc4c4ccc5cscc5c4c3cc12
+11.67   -15.36        c1ccc2c(c1)c1cc3ccsc3cc1c1c3cscc3c3cc(-c4scc5sccc45)ccc3c21
+11.67   -16.78        c1ccc2c(c1)c1ccc3cscc3c1c1c3cscc3c3cc(-c4scc5ccsc45)ccc3c21
+11.67   -19.57        c1cc(-c2cc3cc4c5cscc5c5ccc6cscc6c5c4cc3c3cscc23)c2cscc2c1
+11.67   -13.99        c1csc(-c2cc3c4cscc4c4c5c6ccccc6ccc5c5cscc5c4c3c3cscc23)c1
+11.67   -20.24        c1cc(-c2cc3sc4c5c6cscc6ccc5c5cscc5c4c3c3ccccc23)c2cscc2c1
+11.67   -18.43        c1cc(-c2cc3c4ccccc4c4c5sccc5c5cscc5c4c3c3cscc23)c2cscc2c1
+11.67   -18.06        c1cc(-c2sc(-c3sc(-c4cccc5cscc45)c4ccsc34)c3ccsc23)c2cscc2c1
+11.67   -17.48        c1cc(-c2sc(-c3sc(-c4scc5ccsc45)c4ccccc34)c3ccsc23)c2cscc2c1
+11.62   -29.00        c1cc(-c2cc3c4ccccc4c4c5c(ccc6nsnc65)c5cscc5c4c3c3cscc23)c2cscc2c1
+11.61   -16.20        c1csc(-c2cc3c4cscc4c4c5c6ccccc6ccc5c5cscc5c4c3c3ccccc23)c1
+11.61   -18.02        c1cc(-c2cc3c4cscc4c4c5ccccc5c5cscc5c4c3c3ccccc23)c2cscc2c1
+11.61   -16.15        c1ccc(-c2cc3c4cscc4c4c5c6ccccc6ccc5c5cscc5c4c3c3cscc23)cc1
+11.61   -23.74        c1cc(-c2cc3c4ccccc4c4c(ccc5ccc6cscc6c54)c3c3cscc23)c2cscc2c1
+11.61   -21.90        c1cc(-c2cc3cc4c5cscc5c5ccc6cscc6c5c4cc3c3ccccc23)c2cscc2c1
+11.61   -17.48        c1ccc2c(-c3scc4ccsc34)ccc(-c3ccc(-c4scc5ccsc45)c4cscc34)c2c1
+11.57   -24.21        C1=C(c2cccc3cscc23)Cc2c1c1cscc1c1c3c4cocc4c4ccccc4c3c3ccccc3c21
+11.55   -23.01        c1ccc2c(-c3ccc4c(c3)c3ccccc3c3c5c6cscc6ccc5c5cscc5c43)cccc2c1
+11.54   -21.20        c1cc2csc(-c3cc4c5cocc5c5c6c7cscc7ccc6c6cocc6c5c4c4cscc34)c2o1
+11.49   -16.87        c1ccc2c(c1)c1ccccc1c1c(-c3cc4ncc5c6c7cscc7ccc6c6c[nH]cc6c5c4s3)scc21
+11.28   -20.57        C1=C(c2cccc3cscc23)Cc2c1c1cscc1c1c3c4c[nH]cc4c(-c4cncs4)cc3c3ccccc3c21
+11.27   -23.22        c1ccc2c(c1)c1cc(-c3scc4ccoc34)c3cscc3c1c1c3cscc3c3ccsc3c21
+11.27   -16.93        c1cc(-c2cc3sc4c5c6cscc6ccc5c5cocc5c4c3c3cscc23)c2cscc2c1
+11.27   -18.49        c1ccc2c(c1)c1cc(-c3scc4ccsc34)c3cocc3c1c1c3cscc3c3ccsc3c21
+11.27   -19.37        c1ccc2c(c1)c1cc(-c3scc4ccsc34)oc1c1c3cscc3c3ccc4cscc4c3c21
+11.27   -17.66        c1cc(-c2cc3c4cscc4c4c5occc5c5cscc5c4c3c3cscc23)c2cscc2c1
+11.27   -15.16        c1cc(-c2cc3c4cscc4c4c5sccc5c5cocc5c4c3c3cscc23)c2cscc2c1
+11.27   -18.08        c1ccc2c(c1)c1cc(-c3scc4ccsc34)c3cscc3c1c1sc3ccc4cocc4c3c21
+11.27   -22.03        c1ccc2c(c1)c1cc(-c3scc4sccc34)c3cscc3c1c1c3cscc3c3ccoc3c21
+11.27   -15.61        c1cc(-c2cc3c4cscc4c4c5sccc5c5cscc5c4c3c3cocc23)c2cscc2c1
+11.27   -14.46        c1cc2csc(-c3cc4c5cscc5c5cc6ccc7cscc7c6cc5c4c4cscc34)c2o1
+11.27   -15.35        c1ccc2c(c1)c1cc(-c3scc4sccc34)oc1c1c3cscc3c3ccc4cscc4c3c21
+
+********************************************************************************
+
+
+real	0m23.444s
+user	0m16.135s
+sys	0m3.626s

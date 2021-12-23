@@ -314,7 +314,6 @@ if __name__ == "__main__":
         smiles_file = sys.argv[1]
     except:
         smiles_file = 'data/data.smi'
-    import pdb; pdb.set_trace()
     print("Reading smiles...")
     smiles_list = canonicalize_smiles_from_file(smiles_file)
     print("Constructing vocabulary...")

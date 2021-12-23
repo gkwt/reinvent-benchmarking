@@ -7,8 +7,8 @@ from train_agent import train_agent
 
 parser = argparse.ArgumentParser(description="Main script for running the model")
 parser.add_argument('--scoring-function', action='store', dest='scoring_function',
-                    choices=['activity_model', 'tanimoto', 'no_sulphur', 'fitness_function'],
-                    default='fitness_function',
+                    choices=['custom_score'],
+                    default='custom_score',
                     help='What type of scoring function to use.')
 parser.add_argument('--scoring-function-kwargs', action='store', dest='scoring_function_kwargs',
                     nargs="*",

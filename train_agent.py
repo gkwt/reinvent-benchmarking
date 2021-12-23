@@ -3,6 +3,9 @@
 import torch
 import pickle
 import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 import time
 import os
 from shutil import copyfile
@@ -12,6 +15,20 @@ from data_structs import Vocabulary, Experience
 from scoring_functions import get_scoring_function
 from utils import Variable, seq_to_smiles, fraction_valid_smiles, unique
 from vizard_logger import VizardLog
+
+def normalize_score(current_fitness, all_fitness, threshold = 0.7):
+    all_fitness = np.array(all_fitness)[~np.isnan(all_fitness)]
+    avg = np.mean(all_fitness)
+    ceil = np.max(all_fitness)
+
+    # sigmoid scaling
+    threshold = 0.99 if threshold > 0.99 else threshold
+    slope = -1.0 / (ceil - avg) * np.log( 2.0 / (threshold + 1.0 ) - 1.0)
+    scaled = 2.0 / (1.0 + np.exp(-slope*(current_fitness - avg))) - 1.0
+    
+    # invalid smiles do not affect the agent, reward is 0
+    scaled[np.isnan(scaled)] = 0.0
+    return scaled
 
 def train_agent(restore_prior_from='data/Prior.ckpt',
                 restore_agent_from='data/Prior.ckpt',
@@ -28,8 +45,6 @@ def train_agent(restore_prior_from='data/Prior.ckpt',
 
     Prior = RNN(voc)
     Agent = RNN(voc)
-
-    logger = VizardLog('data/logs')
 
     # By default restore Agent to same model as Prior, but can restore from already trained Agent too.
     # Saved models are partially on the GPU, but if we dont have cuda enabled we can remap these
@@ -55,20 +70,17 @@ def train_agent(restore_prior_from='data/Prior.ckpt',
     # occur more often (which means the agent can get biased towards them). Using experience replay is
     # therefor not as theoretically sound as it is for value based RL, but it seems to work well.
     experience = Experience(voc)
-
-    # Log some network weights that can be dynamically plotted with the Vizard bokeh app
-    logger.log(Agent.rnn.gru_2.weight_ih.cpu().data.numpy()[::100], "init_weight_GRU_layer_2_w_ih")
-    logger.log(Agent.rnn.gru_2.weight_hh.cpu().data.numpy()[::100], "init_weight_GRU_layer_2_w_hh")
-    logger.log(Agent.rnn.embedding.weight.cpu().data.numpy()[::30], "init_weight_GRU_embedding")
-    logger.log(Agent.rnn.gru_2.bias_ih.cpu().data.numpy(), "init_weight_GRU_layer_2_b_ih")
-    logger.log(Agent.rnn.gru_2.bias_hh.cpu().data.numpy(), "init_weight_GRU_layer_2_b_hh")
-
-    # Information for the logger
-    step_score = [[], []]
+    
+    # collect all the results
+    results = pd.DataFrame({'smiles': [], 'fitness': [], 'score': [], 'generation': []})
+    best_results = pd.DataFrame({'smiles': [], 'fitness': [], 'score': [], 'generation': []})
 
     print("Model initialized, starting training...")
 
     for step in range(n_steps):
+
+        # Current generation
+        collector = {'smiles': [], 'fitness': [], 'score': [], 'generation': []}
 
         # Sample from Agent
         seqs, agent_likelihood, entropy = Agent.sample(batch_size)
@@ -82,7 +94,32 @@ def train_agent(restore_prior_from='data/Prior.ckpt',
         # Get prior likelihood and score
         prior_likelihood, _ = Prior.likelihood(Variable(seqs))
         smiles = seq_to_smiles(seqs, voc)
-        score = scoring_function(smiles)
+        fitness = scoring_function(smiles)
+        collector['smiles'] = smiles
+        collector['fitness'] = fitness
+        collector['generation'] = [step]*len(unique_idxs)
+
+        # normalize using sigmoid
+        if step == 0:
+            score = normalize_score(fitness, collector['fitness'])     
+        else:
+            score = normalize_score(fitness, results['fitness'].tolist())
+        # score = np.array(fitness)
+        # score[np.isnan(score)] = 0.0
+        collector['score'] = score
+        collector = pd.DataFrame(collector)
+
+        results = pd.concat([results, collector])
+
+        best = collector.nlargest(1, 'fitness')
+        best_fitness = best['fitness'].values[0]
+        best_smiles = best['smiles'].values[0]
+
+        best = results.nlargest(1, 'fitness')
+        best_fitness_all = best['fitness'].values[0]
+        best_smiles_all = best['smiles'].values[0]
+        best['generation'] = step
+        best_results = pd.concat([best_results, best])
 
         # Calculate augmented likelihood
         augmented_likelihood = prior_likelihood + sigma * Variable(score)
@@ -124,26 +161,18 @@ def train_agent(restore_prior_from='data/Prior.ckpt',
         time_left = (time_elapsed * ((n_steps - step) / (step + 1)))
         print("\n       Step {}   Fraction valid SMILES: {:4.1f}  Time elapsed: {:.2f}h Time left: {:.2f}h".format(
               step, fraction_valid_smiles(smiles) * 100, time_elapsed, time_left))
-        print("  Agent    Prior   Target   Score             SMILES")
+        print("  Agent    Prior   Target   Score   Fitness             SMILES")
         for i in range(10):
-            print(" {:6.2f}   {:6.2f}  {:6.2f}  {:6.2f}     {}".format(agent_likelihood[i],
+            print(" {:6.2f}   {:6.2f}  {:6.2f}  {:6.2f}   {:6.2f}     {}".format(agent_likelihood[i],
                                                                        prior_likelihood[i],
                                                                        augmented_likelihood[i],
                                                                        score[i],
+                                                                       fitness[i],
                                                                        smiles[i]))
-        # Need this for Vizard plotting
-        step_score[0].append(step + 1)
-        step_score[1].append(np.mean(score))
+        print(f"Best in generation: {best_fitness:6.2f}   {best_smiles}")
+        print(f"Best in general:    {best_fitness_all:6.2f}   {best_smiles_all}")
 
-        # Log some weights
-        logger.log(Agent.rnn.gru_2.weight_ih.cpu().data.numpy()[::100], "weight_GRU_layer_2_w_ih")
-        logger.log(Agent.rnn.gru_2.weight_hh.cpu().data.numpy()[::100], "weight_GRU_layer_2_w_hh")
-        logger.log(Agent.rnn.embedding.weight.cpu().data.numpy()[::30], "weight_GRU_embedding")
-        logger.log(Agent.rnn.gru_2.bias_ih.cpu().data.numpy(), "weight_GRU_layer_2_b_ih")
-        logger.log(Agent.rnn.gru_2.bias_hh.cpu().data.numpy(), "weight_GRU_layer_2_b_hh")
-        logger.log("\n".join([smiles + "\t" + str(round(score, 2)) for smiles, score in zip \
-                            (smiles[:12], score[:12])]), "SMILES", dtype="text", overwrite=True)
-        logger.log(np.array(step_score), "Scores")
+
 
     # If the entire training finishes, we create a new folder where we save this python file
     # as well as some sampled sequences and the contents of the experinence (which are the highest
@@ -153,18 +182,16 @@ def train_agent(restore_prior_from='data/Prior.ckpt',
     os.makedirs(save_dir)
     copyfile('train_agent.py', os.path.join(save_dir, "train_agent.py"))
 
+    results = results.reset_index(drop=True)
+    best_results = best_results.reset_index(drop=True)
+
+    results.to_csv(os.path.join(save_dir, 'results.csv'), index=False)
+    best_results.to_csv(os.path.join(save_dir, 'best_results.csv'), index=False)
+    sns.lineplot(data=best_results, x='generation', y='fitness')
+    plt.savefig(os.path.join(save_dir, 'trace.png'))
+
     experience.print_memory(os.path.join(save_dir, "memory"))
     torch.save(Agent.rnn.state_dict(), os.path.join(save_dir, 'Agent.ckpt'))
-
-    seqs, agent_likelihood, entropy = Agent.sample(256)
-    prior_likelihood, _ = Prior.likelihood(Variable(seqs))
-    prior_likelihood = prior_likelihood.data.cpu().numpy()
-    smiles = seq_to_smiles(seqs, voc)
-    score = scoring_function(smiles)
-    with open(os.path.join(save_dir, "sampled"), 'w') as f:
-        f.write("SMILES Score PriorLogP\n")
-        for smiles, score, prior_likelihood in zip(smiles, score, prior_likelihood):
-            f.write("{} {:5.2f} {:6.2f}\n".format(smiles, score, prior_likelihood))
 
 if __name__ == "__main__":
     train_agent()

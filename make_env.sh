@@ -12,5 +12,6 @@ pip install torch
 pip install scikit-learn
 pip install tqdm
 pip install pexpect
+pip install seaborn
 
 deactivate
