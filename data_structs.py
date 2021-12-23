@@ -222,12 +222,13 @@ def canonicalize_smiles_from_file(fname):
     with open(fname, 'r') as f:
         smiles_list = []
         for i, line in enumerate(f):
-            if i % 100000 == 0:
+            if i % 5000 == 0:
                 print("{} lines processed.".format(i))
             smiles = line.split(" ")[0]
             mol = Chem.MolFromSmiles(smiles)
-            if filter_mol(mol):
-                smiles_list.append(Chem.MolToSmiles(mol))
+            # if filter_mol(mol):
+            #     smiles_list.append(Chem.MolToSmiles(mol))
+            smiles_list.append(Chem.MolToSmiles(mol))
         print("{} SMILES retrieved".format(len(smiles_list)))
         return smiles_list
 

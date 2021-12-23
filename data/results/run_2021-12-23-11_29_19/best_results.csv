@@ -1,0 +1,11 @@
+smiles,fitness,score,generation
+C1=Cc2c(csc2-c2cnc3c(c2)c2cscc2c2c4c5cocc5ccc4c4ccccc4c32)C1,9.9531,0.6999999,0.0
+c1cnc2c(-c3sc(-c4sc(-c5scc6ccsc56)c5[se]ccc45)c4occc34)sc(-c3scc4[nH]ccc34)c2n1,11.2577,0.8071413,1.0
+c1ccc2c(c1)ccc1c3cscc3c3c4ccc(-c5scc6ccsc56)cc4c4ccccc4c3c21,11.6105,0.7277498,2.0
+c1cc2c(-c3ccc(-c4sc(-c5scc6sccc56)c5cc[nH]c45)c4c[nH]cc34)sc(-c3scc4ccsc34)c2s1,13.2073,0.8092835,3.0
+c1cc2c(-c3cc4cnc5c6c7cscc7ccc6c6cscc6c5c4c4cocc34)sc(-c3scc4sccc34)c2s1,13.6032,0.72530913,4.0
+c1cc2c(-c3cc4cnc5c6c7cscc7ccc6c6cscc6c5c4c4cocc34)sc(-c3scc4sccc34)c2s1,13.6032,0.72530913,5.0
+c1cc2c(-c3cc4cnc5c6c7cscc7ccc6c6cscc6c5c4c4cocc34)sc(-c3scc4sccc34)c2s1,13.6032,0.72530913,6.0
+c1cc2c(-c3cc4cnc5c6c7cscc7ccc6c6cscc6c5c4c4cocc34)sc(-c3scc4sccc34)c2s1,13.6032,0.72530913,7.0
+c1ccc2c(c1)c(-c1scc3ccsc13)cc1c3cscc3c3c4c(cc(-c5scc6sccc56)c5nsnc54)c4cscc4c3c21,14.6199,0.7634715,8.0
+c1ccc2c(c1)c(-c1scc3ccsc13)cc1c3cscc3c3c4c(cc(-c5scc6sccc56)c5nsnc54)c4cscc4c3c21,14.6199,0.7634715,9.0

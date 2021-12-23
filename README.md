@@ -1,6 +1,6 @@
 # REINVENT benchmarking
 
-Code is adapted from [https://github.com/MarcusOlivecrona/REINVENT](MarcusOlivecrona/REINVENT).
+Code is adapted from [MarcusOlivecrona/REINVENT](https://github.com/MarcusOlivecrona/REINVENT).
 
 Updated for use with PyTorch v1.10.0. Made for use on CC cluster.
 
@@ -19,17 +19,24 @@ Put data into the `data/` directory. Convert the smiles of data into `data/data.
 ```
 python prepare_data.py
 ```
-
 You may need to modify the script depending on the format of dataset.
+
+Then run 
+```
+python data_structs.py
+```
+to create the `mols_filtered.smi` and `Voc` file required in the `data/` directory. Note that original filtering from REINVENT 1.0 is removed, and SMILES are just check for validitiy and canonicalised.
 
 ## Train model
 
 Pretrain the model for specified `num-epochs` by running:
 ```
-python train_prior.py --num-epochs 50
+python train_prior.py --num-epochs 100
 ```
 
-You can view progress bar by toggling flag `--verbose`. No early stopping is implemented. Learning is decreased every 50 steps.
+You can view progress bar by toggling flag `--verbose`. 
+
+Early stopping is implemented, default split is 80/20 using the first 80% of SMILES as training. Learning rate is decreased every 50 steps. The model is saved in `data/Prior.ckpt`.
 
 ## Fitness function
 
@@ -55,3 +62,6 @@ Run the REINVENT for generations = `num-steps` with evaluations = `batch_size` p
 ```
 python main.py --num-steps 10 --batch-size 500
 ```
+
+Results will be saved in `data/results`, in a folder named by the timestamp of run. In this folder, a trace of the optimisation is plotted, and the results for each generation (`results.csv`), and the best molecule per generation (`best_results.csv`) are saved.
+
